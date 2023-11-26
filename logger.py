@@ -21,6 +21,16 @@ def print_data():
         data_notes = data_notes_version
         print(''.join(data_notes))
 
+def put_data():
+    print('Из какого файла Вы хотите изменить данные?')
+    data_notes = print_data()
+    print("Какую именно запись по счету Вы хотите изменить?")
+    number_journal = int(input('Введите номер записи: '))
+    number_journal -= 1
+    change_line(data_notes, number_journal)
+
+def change_line(dataFile, numberRow):
+
 
 
 
