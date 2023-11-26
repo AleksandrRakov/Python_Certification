@@ -1,4 +1,5 @@
-from logger import input_data, print_data
+from logger import input_data, print_data, put_data, delete_data
+
 
 
 def interface():
@@ -21,6 +22,9 @@ def interface():
             input_data()
         elif command == 2:
             print_data()
-
+        elif command == 3:
+            put_data()
+        elif command == 4:
+            delete_data()
         elif command == 5:
             print("Спасибо, что воспользовались нашим сервисом. Всего хорошего!")
