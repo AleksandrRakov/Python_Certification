@@ -10,6 +10,6 @@ def body_data():
 
 
 def today_data():
-    today = datetime.now()
+    today = str(datetime.now().strftime("%d.%m.%Y %H:%M"))
     return today
 
