@@ -65,12 +65,12 @@ def change_line(data_notes, number_journal):
 
     
     
-    data_notes = data_notes[:number_journal] + [f'{name}\n{body}\n{data}\n'] + \
+    data_not = data_notes[:number_journal] + [f'{name}\n{body}\n{data}\n'] + \
                  data_notes[number_journal + 1:]
     if number_journal + 1 == len(data_notes):
-        data_notes = data_notes[:number_journal] + [f'{name}\n{body}\n{data}\n']
+        data_not = data_notes[:number_journal] + [f'{name}\n{body}\n{data}\n']
     with open('notes.csv', 'w', encoding='utf-8') as file:
-        file.write(''.join(data_notes))
+        file.write(''.join(data_not))
     print('Изменения успешно сохранены!')
 
 
@@ -82,7 +82,7 @@ def delete_data():
     print(f'Удалить данную запись\n{data_notes[number_journal - 1]}')
     # print(data_notes[:number_journal - 1], data_notes[number_journal + 1:]) error
     data_notes = data_notes[:number_journal - 1] + data_notes[number_journal + 1:]
-    with open('data_notes_variant.csv', 'w', encoding='utf-8') as file:
+    with open('notes.csv', 'w', encoding='utf-8') as file:
         file.write(''.join(data_notes))
     print('Изменения успешно сохранены!')
 
