@@ -63,8 +63,7 @@ def change_line(dataFile, numberRow):
 
 
 
-    data_first = dataFile[:numberRow] + [f'{name}\n{body}\n{today_data()}'] + \
-                 dataFile[numberRow + 1:]
+    data_first = dataFile[:numberRow] + [f'{name}\n{body}\n{today_data()}'] + dataFile[numberRow + 1:]
     if numberRow + 1 == len(dataFile):
         data_first = dataFile[:numberRow] + [f'{name}\n{body}\n{today_data()}\n']
     with open('notes.csv', 'w', encoding='utf-8') as file:
